@@ -1,8 +1,6 @@
  
 - 
 	## 融合步骤解析
-	----------
-
 
 	### 一、安装react-native开发环境
 	详细请参照 [React-Native中文网](http://leanote.leanote.com)
@@ -279,7 +277,7 @@
 	
 	bundle文件可以通过命令进行生成，此命令执行时会把相关图片资源放至drawable文件夹下。也可直接复制示例demo工程的相关文件
 
-	 **<font size=2>通过命令生成bundle文件</font>**
+	 <font size=2><b>通过命令生成bundle文件</b></font>
 
 	<pre>React-native bundle --entry-file
 	index.android.js --bundle-output 
