@@ -235,30 +235,30 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
     ![.module.RnActivity](http://ogrzkg62w.bkt.clouddn.com/module.png)
 
  - 宿主应用在业务应用场景下跳转至网罗天下系统部分（示例应用的MainActivity类中）
- <pre> public void goToRN(View view) {
-​
-        try {
-            Intent intent = new Intent(this, RnActivity.class);
-            intent.putExtra("param", AESEncrypt.encrypt(makeData(), getResources().getString(R.string.rn_aes_key)));
-            Log.d("tag", "加密后：" + AESEncrypt.encrypt(makeData(), getResources().getString(R.string.rn_aes_key)));
-            startActivity(intent);
-​
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(this, "加密出错！" + e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }
-        private String makeData() {
-        String pid = et_pid.getText().toString().trim();
-        String phone = et_phone.getText().toString().trim();
-//        String area = et_area.getText().toString().trim();
-​
-​
-//        String result = "{ billId:\"" + etPhone.getText().toString().trim() + "\" ,accessSource: \" 371 \" }";
-        String result = "{billId:\"" + phone + "\" ,accessSource: \"" + "liaoning" + "\"}";
-        Log.d("tag", "加密前：" + result);
-        return result;
-    }</pre>
+   <pre> public void goToRN(View view) {
+  ​
+          try {
+              Intent intent = new Intent(this, RnActivity.class);
+              intent.putExtra("param", AESEncrypt.encrypt(makeData(), getResources().getString(R.string.rn_aes_key)));
+              Log.d("tag", "加密后：" + AESEncrypt.encrypt(makeData(), getResources().getString(R.string.rn_aes_key)));
+              startActivity(intent);
+  ​
+          } catch (Exception e) {
+              e.printStackTrace();
+              Toast.makeText(this, "加密出错！" + e.getMessage(), Toast.LENGTH_LONG).show();
+          }
+      }
+          private String makeData() {
+          String pid = et_pid.getText().toString().trim();
+          String phone = et_phone.getText().toString().trim();
+  //        String area = et_area.getText().toString().trim();
+  ​
+  ​
+  //        String result = "{ billId:\"" + etPhone.getText().toString().trim() + "\" ,accessSource: \" 371 \" }";
+          String result = "{billId:\"" + phone + "\" ,accessSource: \"" + "liaoning" + "\"}";
+          Log.d("tag", "加密前：" + result);
+          return result;
+      }</pre>
 > <font size=2>accessSource参数值请写liaoning</font>
 ## 运行项目
 此处分为两种情况，一为开启本地服务，运行debug模式；一为直接复制bundle文件至aeests目录下(此处需要复制图片资源)
