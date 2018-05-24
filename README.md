@@ -1,8 +1,6 @@
  
 
 # 融合步骤解析
-
-
 ----------
 
 
@@ -13,7 +11,8 @@
 ## 三、运行RnDemoTest示例工程
 ### 解压RnDemoTest.zip
 RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行 npm install命令。如下图所示：
-![图片标题](http://ogrzkg62w.bkt.clouddn.com/npminsts.png)
+
+![图片标题](http://ogrzkg62w.bkt.clouddn.com/npminsts.png) 
 
 > <font size=2>若出现安装异常失败等，请更新npm至淘宝镜像地址。每次重新执行npm install 命令前都须删除node_modules文件夹，保证不必要的异常情况</font>
 
