@@ -115,35 +115,35 @@
 	       apply plugin: 'com.android.application'
 	       ​
 	       android {
-		   compileSdkVersion 26
-		   defaultConfig {
-		       applicationId "com.cmos.rndemo"
-		       minSdkVersion 16
-		       targetSdkVersion 26
-		       versionCode 1
-		       versionName "1.2.0"
-		       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-	       ​
-		       ndk {
-			   abiFilters "armeabi-v7a", "x86"
-		       }
-		   }
-		   signingConfigs {
-		       release {
-			   storeFile file(MYAPP_RELEASE_STORE_FILE)
-			   storePassword MYAPP_RELEASE_STORE_PASSWORD
-			   keyAlias MYAPP_RELEASE_KEY_ALIAS
-			   keyPassword MYAPP_RELEASE_KEY_PASSWORD
-		       }
-		   }
-		   buildTypes {
-		       release {
-			   minifyEnabled true
-			   signingConfig signingConfigs.release
-			   proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-		       }
-		   }
-	       ​
+			   compileSdkVersion 26
+			   defaultConfig {
+			       applicationId "com.cmos.rndemo"
+			       minSdkVersion 16
+			       targetSdkVersion 26
+			       versionCode 1
+			       versionName "1.2.0"
+			       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+		       ​
+			       ndk {
+				   abiFilters "armeabi-v7a", "x86"
+			       }
+			   }
+			   signingConfigs {
+			       release {
+				   storeFile file(MYAPP_RELEASE_STORE_FILE)
+				   storePassword MYAPP_RELEASE_STORE_PASSWORD
+				   keyAlias MYAPP_RELEASE_KEY_ALIAS
+				   keyPassword MYAPP_RELEASE_KEY_PASSWORD
+			       }
+			   }
+			   buildTypes {
+			       release {
+				   minifyEnabled true
+				   signingConfig signingConfigs.release
+				   proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			       }
+			   }
+		       ​
 	       }
 	       ​
 	       dependencies {
