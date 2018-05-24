@@ -210,7 +210,7 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
 	```
 
 	```
-	     @Override
+	  @Override
 		public ReactNativeHost getReactNativeHost() {
 		    return mReactNativeHost;
 		}
