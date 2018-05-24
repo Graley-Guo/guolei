@@ -68,7 +68,7 @@
 
 
 	 - 参考示例工程修改根目录下的build.gradle文件,gradle版本使用宿主应用的gradle版本即可
-	    <pre>
+	   
 	    buildscript {
 		repositories {
 		    google()
@@ -87,7 +87,7 @@
 			url "$rootDir/node_modules/react-native/android"
 		    }
 		}
-	    }</pre>
+	    }
 
 	> <font size=2>本步骤可能会提示更新依赖module的sdk版本，请根据宿主应用实际情况进行更新操作</font>
 
