@@ -110,6 +110,7 @@
 	 - SyncNow同步，稍等正常同步
 
 	完整示例代码参考示例工程
+	
 	   ```
 	       apply plugin: 'com.android.application'
 	       ​
@@ -285,7 +286,8 @@
 	./app/src/main/res/ --dev false</pre>
 	> <font size=2>该命令会同步生成图片放至drawable文件夹下，同时assets目录会生成index.android.js和index.android.js.meta文件(assets文件夹若没有需手动创建)</font>
 
-	 **复制示例工程bundle文件与图片资源**
+	 <font size=2><b>复制示例工程bundle文件与图片资源</b></font>
+
 
 	 - 复制示例工程的index.android.js和index.android.js.meta文件至assets目录下，若没有assets目录则创建该目录.
 	 - 复制示例工程各个drawable文件夹下带node_modules开头与rn_res开头的图片资源    
