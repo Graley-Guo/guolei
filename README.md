@@ -277,7 +277,6 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
     若真机通过数据线连接电脑，执行以下命令  
     adb reverse tcp:8081 tcp:8081
     然后reload
-
 ### 复制bundle文件与图片资源
 bundle文件可以通过命令进行生成，此命令执行时会把相关图片资源放至drawable文件夹下。也可直接复制示例demo工程的相关文件
 
