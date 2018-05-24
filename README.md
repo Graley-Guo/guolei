@@ -111,7 +111,7 @@
 
 	完整示例代码参考示例工程
 	
-	   ```
+	   
 	       apply plugin: 'com.android.application'
 	       ​
 	       android {
@@ -162,7 +162,7 @@
 		   compile project(':react-native-linear-gradient')
 	       ​
 	       }
-	   ```
+	   
 	### 代码/文件添加
 
 	 - 复制示例工程index.android.js至宿主应用根目录
