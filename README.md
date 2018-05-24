@@ -219,8 +219,9 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
             SoLoader.init(this, /* native exopackage */ false);
         }
 ```
-		- Applicaiton类的OnCreate方法中执行SoLoader.init(this, false)是为了收集react-native所需要的so包
-		- protected List getPackages() {}方法则是注册自定义package等
+- 
+	- Applicaiton类的OnCreate方法中执行SoLoader.init(this, false)是为了收集react-native所需要的so包
+	- protected List getPackages() {}方法则是注册自定义package等
  - 建议复制示例工程src源代码下的module至宿主应用src下,也可手动创建文件，然后复制代码。如下图所示
      - AESEncrypt:使用AES加解密方式传递参数
     
