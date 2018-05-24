@@ -112,56 +112,58 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
  - SyncNow同步，稍等正常同步
  
 完整示例代码参考示例工程
-    <pre>
-    apply plugin: 'com.android.application'
-    android {
-        compileSdkVersion 26
-        defaultConfig {
-            applicationId "com.cmos.rndemo"
-            minSdkVersion 16
-            targetSdkVersion 26
-            versionCode 1
-            versionName "1.2.0"
-            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-            ndk {
-                abiFilters "armeabi-v7a", "x86"
-            }
-        }
-        signingConfigs {
-            release {
-                storeFile file(MYAPP_RELEASE_STORE_FILE)
-                storePassword MYAPP_RELEASE_STORE_PASSWORD
-                keyAlias MYAPP_RELEASE_KEY_ALIAS
-                keyPassword MYAPP_RELEASE_KEY_PASSWORD
-            }
-        }
-        buildTypes {
-            release {
-                minifyEnabled true
-                signingConfig signingConfigs.release
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            }
-        }
-    }
-    
-    dependencies {
-        implementation fileTree(dir: 'libs', include: ['*.jar'])
-        implementation 'com.android.support:appcompat-v7:26.1.0'
-        implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-        testImplementation 'junit:junit:4.12'
-        androidTestImplementation 'com.android.support.test:runner:1.0.1'
-        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'    
-        
-        compile "com.facebook.react:react-native:+"
-        compile project(':react-native-image-picker')
-        compile project(':react-native-device-info')
-        compile project(':react-native-code-push')
-        compile project(':react-native-picker')
-        compile project(':react-native-linear-gradient')    
-        
-    }
-    </pre>
-
+   ```
+       apply plugin: 'com.android.application'
+       ​
+       android {
+           compileSdkVersion 26
+           defaultConfig {
+               applicationId "com.cmos.rndemo"
+               minSdkVersion 16
+               targetSdkVersion 26
+               versionCode 1
+               versionName "1.2.0"
+               testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+       ​
+               ndk {
+                   abiFilters "armeabi-v7a", "x86"
+               }
+           }
+           signingConfigs {
+               release {
+                   storeFile file(MYAPP_RELEASE_STORE_FILE)
+                   storePassword MYAPP_RELEASE_STORE_PASSWORD
+                   keyAlias MYAPP_RELEASE_KEY_ALIAS
+                   keyPassword MYAPP_RELEASE_KEY_PASSWORD
+               }
+           }
+           buildTypes {
+               release {
+                   minifyEnabled true
+                   signingConfig signingConfigs.release
+                   proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+               }
+           }
+       ​
+       }
+       ​
+       dependencies {
+           implementation fileTree(dir: 'libs', include: ['*.jar'])
+           implementation 'com.android.support:appcompat-v7:26.1.0'
+           implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+           testImplementation 'junit:junit:4.12'
+           androidTestImplementation 'com.android.support.test:runner:1.0.1'
+           androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+       ​
+           compile "com.facebook.react:react-native:+"
+           compile project(':react-native-image-picker')
+           compile project(':react-native-device-info')
+           compile project(':react-native-code-push')
+           compile project(':react-native-picker')
+           compile project(':react-native-linear-gradient')
+       ​
+       }
+   ```
 ## 代码/文件添加
 
  - 复制示例工程index.android.js至宿主应用根目录
