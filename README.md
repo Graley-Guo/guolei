@@ -266,7 +266,7 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
 ### 运行项目
 
  - run 'app'(shift+F10)运行debug应用
- - 提示服务未启动
+ - 提示服务未启动    
  ![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E6%9C%8D%E5%8A%A1%E6%9C%AA%E5%90%AF%E5%8A%A8.png)
 
     <pre>若真机通过数据线连接电脑，执行以下命令  
