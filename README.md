@@ -1,20 +1,20 @@
  
 - 
-	# 融合步骤解析
+	## 融合步骤解析
 	----------
 
 
-	## 一、安装react-native开发环境
+	### 一、安装react-native开发环境
 	详细请参照 [React-Native中文网](http://leanote.leanote.com)
-	## 二、运行示例apk
+	### 二、运行示例apk
 	在安卓手机中运行附件中的release.apk,此apk模拟安卓界面跳转至网罗天下系统界面
-	## 三、运行RnDemoTest示例工程
-	### 解压RnDemoTest.zip
+	### 三、运行RnDemoTest示例工程
+	#### 解压RnDemoTest.zip
 	RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行 npm install命令。如下图所示：    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/npminsts.png) 
 	> <font size=2>若出现安装异常失败等，请更新npm至淘宝镜像地址。每次重新执行npm install 命令前都须删除node_modules文件夹，保证不必要的异常情况</font>
 
-	### 使用AS打开RnDemoTest
+	#### 使用AS打开RnDemoTest
 	使用Android Studio打开后如图所示：    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%BB%93%E6%9E%84.png)    
 	这里解释下同原生android目录不同的部分：
@@ -25,7 +25,7 @@
 	 - package.json : 模块定义文件，勿删除
 	 - package-lock.json :用于锁定模块版本号，不建议删除
 
-	### 运行工程
+	#### 运行工程
 	确认app/src/main/assets下面有index.android.bundle和index.android.bundle.meta 文件,如图所示：
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/index.png)
 
@@ -35,16 +35,14 @@
 
 
 
-	# 系统修改步骤
-
-	----------
+	## 系统修改步骤
 
 	此处统一称省端esop、一体机app以及其他待融合应用为宿主应用。
-	## 宿主应用添加模块依赖
+	### 宿主应用添加模块依赖
 	- 把示例工程的package.json和package-lock.json文件拷贝至宿主应用的项目根目录下
 	- 执行npm install 命令安装相关依赖或者复制示例demo中的node_modules文件夹至宿主应用根目录下
 
-	## build.gradle添加相关module
+	### build.gradle添加相关module
 
 	 - 参考示例工程修改根目录下的settings.gradle文件,添加module依赖
 
@@ -166,7 +164,7 @@
 	       ​
 	       }
 	   ```
-	## 代码/文件添加
+	### 代码/文件添加
 
 	 - 复制示例工程index.android.js至宿主应用根目录
 	 - 打开AndroidManifest.xml文件,添加以下权限
@@ -265,9 +263,9 @@
 		 return result;
 	     }</pre>
 	> <font size=2>accessSource参数值请写liaoning</font>
-	## 运行项目
+	### 运行项目
 	此处分为两种情况，一为开启本地服务，运行debug模式；一为直接复制bundle文件至aeests目录下(此处需要复制图片资源)
-	### 运行debug
+	#### 运行debug
 
 	 - run 'app'(shift+F10)运行debug应用
 	 - 提示服务未启动    
@@ -277,10 +275,10 @@
 	    若真机通过数据线连接电脑，执行以下命令  
 	    adb reverse tcp:8081 tcp:8081
 	    然后reload
-	### 复制bundle文件与图片资源
+	#### 复制bundle文件与图片资源
 	bundle文件可以通过命令进行生成，此命令执行时会把相关图片资源放至drawable文件夹下。也可直接复制示例demo工程的相关文件
 
-	#### 通过命令生成bundle文件
+	 **通过命令生成bundle文件**
 
 	<pre>React-native bundle --entry-file
 	index.android.js --bundle-output 
@@ -288,13 +286,13 @@
 	./app/src/main/res/ --dev false</pre>
 	> <font size=2>该命令会同步生成图片放至drawable文件夹下，同时assets目录会生成index.android.js和index.android.js.meta文件(assets文件夹若没有需手动创建)</font>
 
-	#### 复制示例工程bundle文件与图片资源
+	 **复制示例工程bundle文件与图片资源**
 
 	 - 复制示例工程的index.android.js和index.android.js.meta文件至assets目录下，若没有assets目录则创建该目录.
 	 - 复制示例工程各个drawable文件夹下带node_modules开头与rn_res开头的图片资源    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/drawable.png)
 
-	## 打包生成apk 
+	### 打包生成apk 
 	此处需要注意，package.json、index.android.js、RnActivity中的组件名称要同settings.gradle中的rootProject.name保持一致.
 
 	 - package.json     
@@ -306,17 +304,17 @@
 	 - settings.gradle    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo4.png)
 
-	# 附录
+	## 附录
 
-	## 加密解密
+	### 加密解密
 	本次参数统一经过AES加解密方式，请复制示例工程的AESEncrypt与res/values下的strings.xml文件。strings.xml中定义加密key，请勿随意替换，否则网罗天下部分单点登录接口将获取参数异常。        
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo5.png)
-	## 热更新
+	### 热更新
 	网罗天下app更新采用热更新，具体使用code-push组件。code-push的相关key保存在values/strings.xml中,最终生产环境key值请同网罗天下团队及时沟通确认。    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo5.png)    
 	具体使用在Application中:    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/codepush.png)    
-	## 依赖模块    
+	### 依赖模块    
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/module22.png)    
 
 	 - react-native:+:react-native项目必须依赖
@@ -325,10 +323,10 @@
 	 - react-native-code-push:热更新模块
 	 - react-native-picker:react-native版时间与城市选择
 	 - react-native-linear-gradient:react-native渐变组件
-	## 混淆
+	### 混淆
 	请参照示例工程中的混淆文件"proguard-rules.pro"
 
-	## 异常
+	### 异常
 	打包releaseapk时，可能出现rn-res...logo01.png is not singed等，请把rn-res..logo01、rn-res..logo02、rn-res..logo03删除即可
 
 
