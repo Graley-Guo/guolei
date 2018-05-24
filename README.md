@@ -101,12 +101,14 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
             abiFilters "armeabi-v7a", "x86"
         }</pre>
     - 添加dependencies
-    <pre>compile "com.facebook.react:react-native:+"
+    <pre>
+    compile "com.facebook.react:react-native:+"
     compile project(':react-native-image-picker')
     compile project(':react-native-device-info')
     compile project(':react-native-code-push')
     compile project(':react-native-picker')
-    compile project(':react-native-linear-gradient')</pre>
+    compile project(':react-native-linear-gradient')
+    </pre>
 
     - 具体最小sdk版本请参考示例工程
  - SyncNow同步，稍等正常同步
