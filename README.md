@@ -8,8 +8,7 @@
 
 ## 一、安装react-native开发环境
 详细请参照 [React-Native中文网](http://leanote.leanote.com)
-
-##二、运行示例apk
+## 二、运行示例apk
 在安卓手机中运行附件中的release.apk,此apk模拟安卓界面跳转至网罗天下系统界面
 ## 三、运行RnDemoTest示例工程
 ### 解压RnDemoTest.zip
