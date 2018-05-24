@@ -68,9 +68,8 @@
 
 
 	 - 参考示例工程修改根目录下的build.gradle文件,gradle版本使用宿主应用的gradle版本即可
-	 
-		   ```
-		    buildscript {
+		```
+		 buildscript {
 			repositories {
 			    google()
 			    jcenter()
@@ -90,6 +89,8 @@
 			}
 		    }
 		```
+		
+		
 	> <font size=2>本步骤可能会提示更新依赖module的sdk版本，请根据宿主应用实际情况进行更新操作</font>
 
 	 - 参考示例工程修改app下的build.gradle文件
