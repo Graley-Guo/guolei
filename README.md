@@ -187,25 +187,26 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
 <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 ```
  - 修改宿主应用的自定义Application类实现ReactApplication,若无则创建自定义Applicaiton类然后实现ReactApplication,最后添加以下代码,参考示例工程      
- <pre>private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-        @Override
-        public boolean getUseDeveloperSupport() {
-            return BuildConfig.DEBUG;
-        }
-​
-        @Override
-        protected List<ReactPackage> getPackages() {
-            return Arrays.<ReactPackage>asList(
-                    new MainReactPackage(),
-                    new ImagePickerPackage(), new RNDeviceInfo(), new PickerViewPackage(), new LinearGradientPackage(), new MyReactPackage(),
-                    new CodePush(
-                            getResources().getString(
-                                    BuildConfig.DEBUG ? R.string.reactNativeCodePush_androidDeploymentKey_staging
-                                            : R.string.reactNativeCodePush_androidDeploymentKey_production),
-                            getApplicationContext(), BuildConfig.DEBUG));
-        }
-​
-    };</pre>
+      ```
+      private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+             @Override
+             public boolean getUseDeveloperSupport() {
+                 return BuildConfig.DEBUG;
+             }
+     ​
+             @Override
+             protected List<ReactPackage> getPackages() {
+                 return Arrays.<ReactPackage>asList(
+                         new MainReactPackage(),
+                         new ImagePickerPackage(), new RNDeviceInfo(), new PickerViewPackage(), new LinearGradientPackage(), new MyReactPackage(),
+                         new CodePush(
+                                 getResources().getString(
+                                         BuildConfig.DEBUG ? R.string.reactNativeCodePush_androidDeploymentKey_staging
+                                                 : R.string.reactNativeCodePush_androidDeploymentKey_production),
+                                 getApplicationContext(), BuildConfig.DEBUG));
+             }
+     ​
+         };
     
          ```
                    @Override
@@ -217,7 +218,7 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
                          super.onCreate();
                          SoLoader.init(this, /* native exopackage */ false);
                      }  
-
+<br>
     - Applicaiton类的OnCreate方法中执行SoLoader.init(this, false)是为了收集react-native所需要的so包
     - protected List getPackages() {}方法则是注册自定义package等
  - 建议复制示例工程src源代码下的module至宿主应用src下,也可手动创建文件，然后复制代码。如下图所示
