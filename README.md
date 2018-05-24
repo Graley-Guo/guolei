@@ -29,9 +29,10 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
 确认app/src/main/assets下面有index.android.bundle和index.android.bundle.meta 文件,如图所示：
 ![图片标题](http://ogrzkg62w.bkt.clouddn.com/index.png)
 
-运行后如下图所示：
-![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B1.png)
-![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B2.png)
+运行后如下图所示：    
+![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B1.png)    
+![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B2.png)    
+
 
 
 # 系统修改步骤
