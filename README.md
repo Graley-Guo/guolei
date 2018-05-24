@@ -82,7 +82,6 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
             classpath 'com.android.tools.build:gradle:3.0.1'
         }
     }
-​
     allprojects {
         repositories {
             google()
