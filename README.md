@@ -269,9 +269,9 @@ RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行
  - 提示服务未启动    
  ![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E6%9C%8D%E5%8A%A1%E6%9C%AA%E5%90%AF%E5%8A%A8.png)
 
-    <pre>若真机通过数据线连接电脑，执行以下命令  
-adb reverse tcp:8081 tcp:8081
-然后reload</pre>
+    ```若真机通过数据线连接电脑，执行以下命令  
+       adb reverse tcp:8081 tcp:8081
+       然后reload
 
 ### 复制bundle文件与图片资源
 bundle文件可以通过命令进行生成，此命令执行时会把相关图片资源放至drawable文件夹下。也可直接复制示例demo工程的相关文件
@@ -293,10 +293,10 @@ index.android.js --bundle-output
 ## 打包生成apk 
 此处需要注意，package.json、index.android.js、RnActivity中的组件名称要同settings.gradle中的rootProject.name保持一致.
 
- - package.json
-![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo1.png)
+ - package.json 
+![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo1.png)    
  - index.android.js
-![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo2.png)
+![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo2.png)    
  - RnActivity
 ![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo3.png)
  - settings.gradle
