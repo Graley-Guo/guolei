@@ -10,15 +10,13 @@
 在安卓手机中运行附件中的release.apk,此apk模拟安卓界面跳转至网罗天下系统界面
 ## 三、运行RnDemoTest示例工程
 ### 解压RnDemoTest.zip
-RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行 npm install命令。如下图所示：
-
+RnDemoTest压缩文件解压后，使用终端进入RnDemoTest根目录。执行 npm install命令。如下图所示：    
 ![图片标题](http://ogrzkg62w.bkt.clouddn.com/npminsts.png) 
-
 > <font size=2>若出现安装异常失败等，请更新npm至淘宝镜像地址。每次重新执行npm install 命令前都须删除node_modules文件夹，保证不必要的异常情况</font>
 
 ### 使用AS打开RnDemoTest
-使用Android Studio打开后如图所示：
-![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%BB%93%E6%9E%84.png)
+使用Android Studio打开后如图所示：    
+![图片标题](http://ogrzkg62w.bkt.clouddn.com/%E7%BB%93%E6%9E%84.png)    
 这里解释下同原生android目录不同的部分：
 
  - node_modules: react-native的模块依赖
