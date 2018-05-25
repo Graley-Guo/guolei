@@ -316,6 +316,7 @@
 	billId | 是       |string| 手机号 |
 	accessSource | 是 |string|地域标示/省份代码|如：sichuan
 	
+	
 		AES加解密方法的key最好存到配置文件里去，别写死在代码里；
     		放到xml或者properties文件里（这个可以自己定）；
     		具体的加解密方法上个版本已给出；
