@@ -185,6 +185,7 @@
 	 ```
 	<activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 	```
+	**注意啦！！！现版本的网罗天下加入了地图定位功能！！！** 需要在AndroidManifest.xml文件里面配置需要的权限及配置相关的地图key（[key的申请](http://lbsyun.baidu.com/index.php?title=android-locsdk/guide/create-project/key)）。具体配置可参考[示例demo](https://github.com/AtoyGG/AndroidOneMachine)里的AndroidManifest.xml文件。如图：![](https://github.com/AtoyGG/AndroidOneMachine/raw/master/img/13501526994283_.pic_hd.jpg)
 	 - 修改宿主应用的自定义Application类实现ReactApplication,若无则创建自定义Applicaiton类然后实现ReactApplication,最后添加以下代码,参考示例工程
 		 ```
 		 private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
