@@ -310,6 +310,17 @@
 	## 附录
 
 	### 加密解密
+	参数名 | 是否必须 | 类型 |  描述  | 说明
+	------ | -------- | ---- |  ----  | ----
+	opId   | 否       |string|  工号  |
+	billId | 是       |string| 手机号 |
+	accessSource | 是 |string|地域标示/省份代码|如：sichuan
+	
+		AES加解密方法的key最好存到配置文件里去，别写死在代码里；
+    		放到xml或者properties文件里（这个可以自己定）；
+    		具体的加解密方法上个版本已给出；
+    		另:约定的ivParameter、key(www.asiainfo.com)请勿随意更换！！！
+	
 	本次参数统一经过AES加解密方式，请复制示例工程的AESEncrypt与res/values下的strings.xml文件。strings.xml中定义加密key，请勿随意替换，否则网罗天下部分单点登录接口将获取参数异常。        
 	![图片标题](http://ogrzkg62w.bkt.clouddn.com/rndemo5.png)
 	### 热更新
